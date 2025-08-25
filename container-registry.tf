@@ -28,7 +28,3 @@ output "container_registry_name" {
   description = "Name Container Registry"
 }
 
-output "container_registry_url" {
-  value       = yandex_container_registry.this.id
-  description = "Registry URL (cr.yandex.net/REGISTRY_ID)"
-}
