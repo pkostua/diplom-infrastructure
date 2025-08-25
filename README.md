@@ -1,0 +1,36 @@
+# Быстрая настройка GitHub Workflow
+
+## 1. Настройка секретов в GitHub
+
+Перейдите в `Settings` → `Secrets and variables` → `Actions` и добавьте:
+
+| Секрет           | Значение                       |
+|------------------|--------------------------------|
+| `YC_CLOUD_ID`    | `b1gmfhaiiuot74gqhebq`         |
+| `YC_FOLDER_ID`   | `b1gikdb72f87k94t9`            |
+| `YC_SA_KEY`      | Содержимое файла `sa-key.json` |
+| `SSH_PUBLIC_KEY` | Содержимое файла `id_rsa.pub`  |
+
+## 2. Как получить содержимое SSH ключа
+
+Скопируйте все содержимое  ~/.ssh/id_rsa.pub в секрет `SSH_PUBLIC_KEY`.
+
+**Пример содержимого:**
+```
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC... user@hostname
+```
+
+## 3. Как получить содержимое SA ключа
+
+Скопируйте содержимое sa-key.json в секрет `YC_SA_KEY`.
+
+## 4. Как работает
+
+После настройки секретов workflow будет автоматически:
+- При PR: выполнять `terraform plan` и комментировать результат
+- При коммите в main: выполнять `terraform plan` + `terraform apply`
+
+## ⚠️ Важно
+
+- Все чувствительные данные хранятся в секретах GitHub
+- Workflow применяет инфраструктуру только при коммите в защищенные ветки
