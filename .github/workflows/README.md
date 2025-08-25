@@ -12,12 +12,12 @@
 
 ### 2. Добавьте следующие секреты:
 
-| Секрет | Описание | Значение из personal.auto.tfvars |
-|--------|----------|----------------------------------|
-| `YC_CLOUD_ID` | ID облака Yandex Cloud | `b1gmfhaiiuot74gqhebq` |
-| `YC_FOLDER_ID` | ID папки в облаке | `b1gikdb72g92f87k94t9` |
-| `YC_SA_KEY` | JSON ключ сервисного аккаунта | Содержимое файла `sa-key.json` |
-| `SSH_PUBLIC_KEY` | Содержимое публичного SSH ключа | Содержимое файла `id_rsa.pub` (например: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC...) |
+| Секрет | Описание |
+|--------|----------|
+| `YC_CLOUD_ID` | ID облака Yandex Cloud |
+| `YC_FOLDER_ID` | ID папки в облаке | 
+| `YC_SA_KEY` | JSON ключ сервисного аккаунта | 
+| `SSH_PUBLIC_KEY` | Содержимое публичного SSH ключа | 
 
 ### 3. Как добавить секрет:
 
@@ -45,8 +45,5 @@
 - Terraform apply выполняется только после успешного plan
 
 ## Требования
+- Terraform 1.12.0+
 
-- Terraform 1.5.0+
-- Python 3.11+
-- Yandex Cloud CLI
-- Доступ к Yandex Cloud через сервисный аккаунт
