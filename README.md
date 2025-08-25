@@ -6,8 +6,8 @@
 
 | Секрет           | Значение                       |
 |------------------|--------------------------------|
-| `YC_CLOUD_ID`    | `b1gmfhaiiuot74gqhebq`         |
-| `YC_FOLDER_ID`   | `b1gikdb72f87k94t9`            |
+| `YC_CLOUD_ID`    | `хххххххххххххххххххх`         |
+| `YC_FOLDER_ID`   | `ххххххххххххххххх`            |
 | `YC_SA_KEY`      | Содержимое файла `sa-key.json` |
 | `SSH_PUBLIC_KEY` | Содержимое файла `id_rsa.pub`  |
 
