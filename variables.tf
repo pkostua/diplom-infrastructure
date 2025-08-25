@@ -91,7 +91,7 @@ variable "core_fraction" {
 variable "node_disk_gb" {
   type        = number
   description = "Размер диска (ГБ)"
-  default     = 20
+  default     = 30
 }
 
 variable "node_platform_id" {
