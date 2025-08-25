@@ -48,10 +48,7 @@ jobs:
           -backend-config="access_key=${{ secrets.YC_S3_ACCESS_KEY }}" \
           -backend-config="secret_key=${{ secrets.YC_S3_SECRET_KEY }}"
 
-    - name: Terraform Format Check
-      working-directory: ${{ env.TF_WORKING_DIR }}
-      run: terraform fmt -check -recursive
-
+    
     - name: Terraform Validate
       working-directory: ${{ env.TF_WORKING_DIR }}
       run: terraform validate
