@@ -8,9 +8,9 @@ variable "folder_id" {
   description = "ID папки"
 }
 
-variable "sa_key" {
+variable "sa_key_file" {
   type        = string
-  description = "Содержимое JSON ключа сервисного аккаунта"
+  description = "Путь к JSON ключу сервисного аккаунта"
 }
 
 variable "default_zone" {
